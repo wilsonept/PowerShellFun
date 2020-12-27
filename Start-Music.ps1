@@ -1,5 +1,8 @@
 ﻿$String = 'ПРИВЕТ АЛЕКСИЙ! ,,,,,,,,,,,,,,,,С НОВЫМ ГОДОМ ЙОПТА!'
-$Path = 'C:\Windows\Temp\Music.wav'
+
+$bat = 'C:\Users\<USER_NAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Start-Prank.bat'
+$wav = 'C:\Windows\Temp\Music.wav'
+$ps1 = 'C:\Windows\Temp\Start-Music.ps1'
 
 function Start-Speech($String)
 {
@@ -18,5 +21,17 @@ function Start-Music($Path)
     Write-Host '$Player.Stop()' -ForegroundColor Green
 }
 
+function Remove-Prank ($bat, $wav, $ps1)
+{
+    $Command = "Start-Sleep 3; Remove-Item $bat,$wav,$ps1"
+    C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command $Command
+}
+
+# Произнести приветственную фразу
 Start-Speech -String $String
-Start-Music -Path $Path
+
+# Начать проигрывание музыки
+Start-Music -Path $wav
+
+# Удалить файлы розыгрыша
+Remove-Prank -bat $bat -wav $wav -ps1 $ps1

@@ -28,4 +28,11 @@ Set-ExecutionPolicy Restricted
 $Player.Stop()
 ```
 
+Для автоматического *"затирания следов"* укажите все необходимые пути в файле **Start-Music.ps1**
+```powershell
+$bat = 'C:\Users\<USER_NAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Start-Prank.bat'
+$wav = 'C:\Windows\Temp\Music.wav'
+$ps1 = 'C:\Windows\Temp\Start-Music.ps1'
+```
+
 ### Удачного прикола! =)
