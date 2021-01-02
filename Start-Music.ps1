@@ -1,8 +1,8 @@
 ﻿$String = 'ПРИВЕТ АЛЕКСИЙ! ,,,,,,,,,,,,,,,,С НОВЫМ ГОДОМ ЙОПТА!'
 
 $bat = 'C:\Users\<USER_NAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Start-Prank.bat'
-$wav = 'C:\Windows\Temp\Music.wav'
-$ps1 = 'C:\Windows\Temp\Start-Music.ps1'
+$wav = 'C:\Users\<USER_NAME>\AppData\Local\Temp\Music.wav'
+$ps1 = 'C:\Users\<USER_NAME>\AppData\Local\Temp\Start-Music.ps1'
 
 function Start-Speech($String)
 {
